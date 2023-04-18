@@ -1,3 +1,4 @@
+import 'package:app_idoso/views/home_view.dart';
 import 'package:app_idoso/views/person_list.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,9 @@ class AppTeste extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Testando",
+      title: "Testando 123",
       theme: ThemeData(primarySwatch: Colors.red),
-      home: PersonList(),
+      home: Home(),
     );
   }
 }
