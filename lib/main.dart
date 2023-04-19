@@ -12,7 +12,8 @@ class AppTeste extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Testando 123",
+      debugShowCheckedModeBanner: false,
+      title: "Testando",
       theme: ThemeData(primarySwatch: Colors.red),
       home: Home(),
     );
