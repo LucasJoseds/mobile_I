@@ -1,7 +1,15 @@
+import 'package:app_idoso/views/schedule_list.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Home extends StatefulWidget {
+  Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +27,24 @@ class Home extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            padding: EdgeInsets.all(50.0),
+            width: 400,
+            height: 400,
             child: GridView.count(
               crossAxisCount: 2,
               children: <Widget>[
                 Card(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0)),
+                      borderRadius: BorderRadius.circular(10.0)),
                   margin: EdgeInsets.all(20.0),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ScheduleList(),
+                        ),
+                      );
+                    },
                     splashColor: Color.fromARGB(255, 59, 209, 96),
                     child: Center(
                         child: Column(
@@ -45,7 +61,7 @@ class Home extends StatelessWidget {
                 ),
                 Card(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0)),
+                      borderRadius: BorderRadius.circular(10.0)),
                   margin: EdgeInsets.all(20.0),
                   child: InkWell(
                     onTap: () {},
@@ -68,7 +84,9 @@ class Home extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
-          currentIndex: 0,
+          currentIndex: currentIndex,
+          selectedItemColor: Colors.green,
+          onTap: (index) => setState(() => currentIndex = index),
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.book), label: "Agenda"),
