@@ -1,5 +1,6 @@
 import 'package:app_idoso/views/home_view.dart';
 import 'package:app_idoso/views/person_list.dart';
+import 'package:app_idoso/views/start_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class AppTeste extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Testando",
       theme: ThemeData(primarySwatch: Colors.red),
-      home: Home(),
+      home: Start(),
     );
   }
 }
