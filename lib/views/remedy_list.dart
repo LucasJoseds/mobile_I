@@ -18,19 +18,6 @@ class RemedyList extends StatelessWidget {
         centerTitle: true,
         title: Text("Remédio"),
         backgroundColor: Color.fromARGB(255, 39, 73, 39),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.add),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => RemedyAdd(),
-                ),
-              );
-            },
-          ),
-        ],
       ),
       body: ListView.builder(
           itemCount: remedys.length,

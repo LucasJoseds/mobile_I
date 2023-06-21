@@ -24,15 +24,14 @@ class _HomeState extends State<Home> {
       ),
       body: Center(
         child: Container(
-          width: 400,
+          width: 600,
           height: 400,
-          child: GridView.count(
-            crossAxisCount: 2,
+          child: Column(
             children: <Widget>[
               Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0)),
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.all(10.0),
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
@@ -59,7 +58,7 @@ class _HomeState extends State<Home> {
               Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0)),
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.all(10.0),
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
