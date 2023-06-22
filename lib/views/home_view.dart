@@ -23,67 +23,89 @@ class _HomeState extends State<Home> {
         backgroundColor: Color.fromARGB(255, 39, 73, 39),
       ),
       body: Center(
-        child: Container(
-          width: 600,
-          height: 400,
-          child: Column(
-            children: <Widget>[
-              Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0)),
-                margin: EdgeInsets.all(10.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ScheduleList(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              padding: EdgeInsets.all(30.0),
+              width: 300,
+              height: 200,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 103, 153, 103),
+                  borderRadius: BorderRadius.circular(30.0)),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "Agenda",
+                    style: TextStyle(color: Colors.white, fontSize: 30),
+                  ),
+                  SizedBox(
+                    height: 1,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "Anotações:",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 19),
                       ),
-                    );
-                  },
-                  splashColor: Color.fromARGB(255, 59, 209, 96),
-                  child: Center(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.book,
-                        size: 70.0,
-                      ),
-                      Text("Agenda")
+                      Text("")
                     ],
-                  )),
-                ),
+                  )
+                ],
               ),
-              Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0)),
-                margin: EdgeInsets.all(10.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => RemedyList(),
+            ),
+            Container(
+              padding: EdgeInsets.all(30.0),
+              width: 300,
+              height: 200,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 103, 153, 103),
+                  borderRadius: BorderRadius.circular(30.0)),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "Remédio",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontSize: 30),
+                  ),
+                  SizedBox(
+                    height: 1,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "Tomados:",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 19),
                       ),
-                    );
-                  },
-                  splashColor: Color.fromARGB(255, 59, 209, 96),
-                  child: Center(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.health_and_safety_rounded,
-                        size: 70.0,
-                      ),
-                      Text("Remédio")
+                      Text("")
                     ],
-                  )),
-                ),
-              )
-            ],
-          ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "A tomar:",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 19),
+                      ),
+                      Text(""),
+                      SizedBox(
+                        height: 10,
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
